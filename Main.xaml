@@ -1,0 +1,156 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1238,1270" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="LNF_EXT_LIF_" Name="LNF_EXT_LIF_prefix_file_name" />
+      <Variable x:TypeArguments="x:String" Default="C:\RPA\TempDownload" Name="LNF_EXT_LIF_download_path" />
+      <Variable x:TypeArguments="x:String" Default="C:\RPA\TempExtraData" Name="LNF_EXT_LIF_target_path" />
+      <Variable x:TypeArguments="x:String" Default="C:\RPA_Template_Extra_Data\RPA_Template_Extra_Data.xlsx" Name="LNF_EXT_LIF_template_file" />
+      <Variable x:TypeArguments="sd:DataTable" Name="LNF_EXT_LIF_data_table" />
+      <Variable x:TypeArguments="x:String" Default="LNF_EXT_LIF_*.xlsx" Name="LNF_EXT_LIF_identify_file_name" />
+      <Variable x:TypeArguments="x:String" Name="LNF_EXT_LIF_download_file" />
+      <Variable x:TypeArguments="x:String" Name="LNF_EXT_LIF_coppied_file_path" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="1. Filter Downloaded File + Write Filtered Data To Data Table" sap:VirtualizedContainerService.HintSize="467,455" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LNF_EXT_LIF_download_file]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Directory.GetFiles(LNF_EXT_LIF_download_path, LNF_EXT_LIF_identify_file_name)(0)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim dt As New DataTable()&#xA;dt.Columns.Add(&quot;Rule&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Search Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Change Column Name&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Before Column Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;After Column Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Required Action&quot;, GetType(String))&#xA;&#xA;Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_download_file)&#xA;    Dim worksheet As ClosedXML.Excel.IXLWorksheet = workbook.Worksheet(1)&#xA;    Dim rows = worksheet.RowsUsed()&#xA;    &#xA;    For Each row As ClosedXML.Excel.IXLRow In rows.Skip(1)&#xA;        Dim valYuJi As String = row.Cell(40).Value.ToString().Trim() ' Column AN&#xA;        If valYuJi = &quot;000&quot; Then&#xA;            Dim valKeYak As String = row.Cell(14).Value.ToString().Trim() ' Column N&#xA;            dt.Rows.Add(&quot;2&quot;, valKeYak, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;NOA&quot;)&#xA;        End If&#xA;    Next&#xA;End Using&#xA;&#xA;LNF_EXT_LIF_data_table = dt" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="LNF_EXT_LIF_download_file">[LNF_EXT_LIF_download_file]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="LNF_EXT_LIF_data_table">[LNF_EXT_LIF_data_table]</OutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+    </Sequence>
+    <Sequence DisplayName="2. Search On Website And Modified Data Table" sap:VirtualizedContainerService.HintSize="467,122" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
+    <Sequence DisplayName="3. Copy Template And Import Data On Data Table To Coppied File" sap:VirtualizedContainerService.HintSize="467,670" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="433,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LNF_EXT_LIF_coppied_file_path]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[Path.Combine(LNF_EXT_LIF_target_path, LNF_EXT_LIF_prefix_file_name + "Extra_Data.xlsx")]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[LNF_EXT_LIF_coppied_file_path]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433,224" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="[LNF_EXT_LIF_template_file]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_final_file_path)&#xD;&#xA;    Dim worksheet = workbook.Worksheet(1)&#xD;&#xA;    ' Chèn dữ liệu vào bảng, bắt đầu từ hàng 2 cột 1 và không bao gồm header từ DataTable&#xD;&#xA;    worksheet.Cell(2, 1).InsertData(LNF_EXT_LIF_data_table.Rows)&#xD;&#xA;    workbook.Save()&#xD;&#xA;End Using" DisplayName="Invoke Code - Export to Excel" sap:VirtualizedContainerService.HintSize="433,188" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="LNF_EXT_LIF_final_file_path">[LNF_EXT_LIF_coppied_file_path]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="LNF_EXT_LIF_data_table">[LNF_EXT_LIF_data_table]</InArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+    </Sequence>
+  </Sequence>
+</Activity>

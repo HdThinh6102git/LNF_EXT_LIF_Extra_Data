@@ -1,0 +1,6 @@
+{
+  "Name": "LNF_Extra_Data",
+  "ProjectType": "Process",
+  "Description": "LNF_Extra_Data",
+  "MainFile": "Main.xaml"
+}

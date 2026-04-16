@@ -1,0 +1,26 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "LNF_EXT_LIF_download_file&Sequence_2",
+        "LNF_EXT_LIF_download_path&Sequence_1",
+        "LNF_EXT_LIF_target_path&Sequence_1",
+        "LNF_EXT_LIF_template_path&Sequence_1",
+        "LNF_EXT_LIF_data_table&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
