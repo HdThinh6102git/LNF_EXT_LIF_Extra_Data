@@ -86,7 +86,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1238,1270" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,1270" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="LNF_EXT_LIF_" Name="LNF_EXT_LIF_prefix_file_name" />
       <Variable x:TypeArguments="x:String" Default="C:\RPA\TempDownload" Name="LNF_EXT_LIF_download_path" />
@@ -116,7 +116,7 @@
           <InArgument x:TypeArguments="x:String">[Directory.GetFiles(LNF_EXT_LIF_download_path, LNF_EXT_LIF_identify_file_name)(0)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim dt As New DataTable()&#xA;dt.Columns.Add(&quot;Rule&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Search Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Change Column Name&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Before Column Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;After Column Data&quot;, GetType(String))&#xA;dt.Columns.Add(&quot;Required Action&quot;, GetType(String))&#xA;&#xA;Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_download_file)&#xA;    Dim worksheet As ClosedXML.Excel.IXLWorksheet = workbook.Worksheet(1)&#xA;    Dim rows = worksheet.RowsUsed()&#xA;    &#xA;    For Each row As ClosedXML.Excel.IXLRow In rows.Skip(1)&#xA;        Dim valYuJi As String = row.Cell(40).Value.ToString().Trim() ' Column AN&#xA;        If valYuJi = &quot;000&quot; Then&#xA;            Dim valKeYak As String = row.Cell(14).Value.ToString().Trim() ' Column N&#xA;            dt.Rows.Add(&quot;2&quot;, valKeYak, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;NOA&quot;)&#xA;        End If&#xA;    Next&#xA;End Using&#xA;&#xA;LNF_EXT_LIF_data_table = dt" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim dt As New DataTable()&#xD;&#xA;dt.Columns.Add(&quot;Rule&quot;, GetType(String))&#xD;&#xA;dt.Columns.Add(&quot;Search Data&quot;, GetType(String))&#xD;&#xA;dt.Columns.Add(&quot;Change Column Name&quot;, GetType(String))&#xD;&#xA;dt.Columns.Add(&quot;Before Column Data&quot;, GetType(String))&#xD;&#xA;dt.Columns.Add(&quot;After Column Data&quot;, GetType(String))&#xD;&#xA;dt.Columns.Add(&quot;Required Action&quot;, GetType(String))&#xD;&#xA;&#xD;&#xA;Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_download_file)&#xD;&#xA;    Dim worksheet As ClosedXML.Excel.IXLWorksheet = workbook.Worksheet(1)&#xD;&#xA;    Dim rows = worksheet.RowsUsed()&#xD;&#xA;    &#xD;&#xA;    For Each row As ClosedXML.Excel.IXLRow In rows.Skip(1)&#xD;&#xA;        Dim valYuJi As String = row.Cell(40).Value.ToString().Trim() ' Column AN&#xD;&#xA;        If valYuJi = &quot;000&quot; Then&#xD;&#xA;            Dim valKeYak As String = row.Cell(14).Value.ToString().Trim() ' Column N&#xD;&#xA;            dt.Rows.Add(&quot;2&quot;, valKeYak, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;NOA&quot;)&#xD;&#xA;        End If&#xD;&#xA;    Next&#xD;&#xA;End Using&#xD;&#xA;&#xD;&#xA;LNF_EXT_LIF_data_table = dt" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
         <ui:InvokeCode.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="LNF_EXT_LIF_download_file">[LNF_EXT_LIF_download_file]</InArgument>
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="LNF_EXT_LIF_data_table">[LNF_EXT_LIF_data_table]</OutArgument>
@@ -130,7 +130,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Sequence>
-    <Sequence DisplayName="3. Copy Template And Import Data On Data Table To Coppied File" sap:VirtualizedContainerService.HintSize="467,670" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="3. Copy Template And Import Data On Data Table To Coppied File" sap:VirtualizedContainerService.HintSize="467,774" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,11 +141,11 @@
           <OutArgument x:TypeArguments="x:String">[LNF_EXT_LIF_coppied_file_path]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[Path.Combine(LNF_EXT_LIF_target_path, LNF_EXT_LIF_prefix_file_name + "Extra_Data.xlsx")]</InArgument>
+          <InArgument x:TypeArguments="x:String">[If(File.Exists(Path.Combine(LNF_EXT_LIF_target_path, LNF_EXT_LIF_prefix_file_name + "Extra_Data.xlsx")), Path.Combine(LNF_EXT_LIF_target_path, LNF_EXT_LIF_prefix_file_name + "Extra_Data_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".xlsx"), Path.Combine(LNF_EXT_LIF_target_path, LNF_EXT_LIF_prefix_file_name + "Extra_Data.xlsx"))]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[LNF_EXT_LIF_coppied_file_path]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433,224" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="[LNF_EXT_LIF_template_file]" />
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_final_file_path)&#xD;&#xA;    Dim worksheet = workbook.Worksheet(1)&#xD;&#xA;    ' Chèn dữ liệu vào bảng, bắt đầu từ hàng 2 cột 1 và không bao gồm header từ DataTable&#xD;&#xA;    worksheet.Cell(2, 1).InsertData(LNF_EXT_LIF_data_table.Rows)&#xD;&#xA;    workbook.Save()&#xD;&#xA;End Using" DisplayName="Invoke Code - Export to Excel" sap:VirtualizedContainerService.HintSize="433,188" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[LNF_EXT_LIF_coppied_file_path]" DisplayName="Copy File" Overwrite="True" sap:VirtualizedContainerService.HintSize="433,224" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="[LNF_EXT_LIF_template_file]" />
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Using workbook As New ClosedXML.Excel.XLWorkbook(LNF_EXT_LIF_final_file_path)&#10;    Dim worksheet = workbook.Worksheet(1)&#10;    Dim r As Integer = 2&#10;    Dim templateStyle = worksheet.Range(2, 1, 2, 6).Style&#10;    For Each row As System.Data.DataRow In LNF_EXT_LIF_data_table.Rows&#10;        worksheet.Range(r, 1, r, 6).Style = templateStyle&#10;        worksheet.Cell(r, 1).Value = row(&quot;Rule&quot;).ToString()&#10;        worksheet.Cell(r, 2).Value = row(&quot;Search Data&quot;).ToString()&#10;        worksheet.Cell(r, 3).Value = row(&quot;Change Column Name&quot;).ToString()&#10;        worksheet.Cell(r, 4).Value = row(&quot;Before Column Data&quot;).ToString()&#10;        worksheet.Cell(r, 5).Value = row(&quot;After Column Data&quot;).ToString()&#10;        worksheet.Cell(r, 6).Value = row(&quot;Required Action&quot;).ToString()&#10;        r += 1&#10;    Next&#10;    workbook.Save()&#10;End Using" DisplayName="Invoke Code - Export to Excel" sap:VirtualizedContainerService.HintSize="433,282" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
         <ui:InvokeCode.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="LNF_EXT_LIF_final_file_path">[LNF_EXT_LIF_coppied_file_path]</InArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="LNF_EXT_LIF_data_table">[LNF_EXT_LIF_data_table]</InArgument>
